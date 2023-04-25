@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Urgig</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+	<script type="text/javascript" src="web3.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<ul>
+          <li><a href="#hero">Home</a></li>
+          
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-buttons" >
+			<button id="register-button" class="btn-primary">Register</button>
+
+          <a href="#" class="btn-secondary" onclick="loginWithMetaMask()">Login</a>
+
+        </div>
+        <div id="nav-toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div id="hero">
+      <h1>Welcome to Urgig</h1>
+      <p>The ultimate platform to connect freelancers and clients</p>
+      <div class="btn-container">
+        <a href="want-freelancer.html" class="btn-primary">Want Freelancer?</a>
+        <a href="freelancer-registration.html" class="btn-secondary">Are you a Freelancer?</a>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>Urgig is a decentralized platform for freelancers and gig posters. Our goal is to provide a transparent and secure platform that allows freelancers and gig posters to connect directly with each other without any third-party interference.</p>
+        <p>With Urgig, all transactions are recorded on a blockchain, ensuring that all interactions between gig posters and freelancers are secure and transparent. Our platform offers a range of tools and services to help freelancers and gig posters find the right match for their needs.</p>
+      </div>
+    </section>
+    
+    
+		<section id="services">
+			<h2>Our Services</h2>
+			<ul>
+				<li>
+					<h3>Freelance Services</h3>
+					<p>Hire the best freelancers for your project.</p>
+				</li>
+				<li>
+					<h3>Job Listings</h3>
+					<p>Find the latest job opportunities.</p>
+				</li>
+				<li>
+					<h3>Collaborate</h3>
+					<p>Work together with other freelancers to get the job done.</p>
+				</li>
+			</ul>
+		</section>
+	</main>
+	<footer>
+			<p>&copy; 2023 Urgig. All Rights Reserved.</p>
+	</footer>
+<script>
+	async function loginWithMetaMask() {
+  // Check if Metamask is installed and enabled
+  if (window.ethereum) {
+    try {
+      // Request user to connect their Metamask wallet
+      const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+      const userWalletAddress = accounts[0];
+      // Perform any action after successful login, e.g. redirect to dashboard page
+      console.log(`Logged in with address: ${userWalletAddress}`);
+    } catch (error) {
+      console.error(error);
+    }
+  } else {
+    console.error('Metamask is not installed');
+  }
+}
+
+</script>
+</body>
+</html>

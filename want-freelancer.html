@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GIG Registration Form</title>
+	<link rel="stylesheet" href="want-freelancer.css">
+</head>
+<body>
+	<header>
+		<a href="index.html">
+			<h1 style="color: white; text-decoration: none;">Urgig</h1>
+		</a>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Contact Us</a></li>
+				<li class="nav-buttons">
+					<a href="#">Login</a>
+					<a href="#">Register</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h2>Freelancer Registration Form</h2>
+		<form>
+			<div class="form-control">
+				<label for="name">Company/Individual Name : </label>
+				<input type="text" id="name" name="name" required>
+			</div>
+			<div class="form-control">
+				<label for="email">Project Title:</label>
+				<input type="email" id="email" name="email" required>
+			</div>
+			<div class="form-control">
+				<label for="password">Explain your project description:</label>
+				<input type="text" id="password" name="password" required>
+			</div>
+			<div class="form-control">
+				<label for="tech-domain">Tech domain required : </label>
+				<select id="cars">
+                    <option value="Web_Dev(Full Stack)">Web Dev(Full Stack)</option>
+                    <option value="backend">backend</option>
+                    <option value="frontend">frontend</option>
+                    <option value="audio/video">Audio/Video</option>
+                    <option value="Writing_and_Translation">Writing and Translation</option>
+                    <option value="Design_Creative">Design & Creative</option>
+                    <option value="Sales_Marketing">Sales and Marketing</option>
+                </select>
+			</div>
+			<div class="btn-container">
+				<button onclick="loginWithMetaMask()" class="btn-primary">Submit</button>
+				<button class="btn-secondary">Cancel</button>
+			</div>
+		</form>
+	</main>
+	<footer>
+		<p>&copy; 2023 Urgig. All rights reserved.</p>
+	</footer>
+	<script>
+		async function loginWithMetaMask() {
+  // Check if Metamask is installed and enabled
+  if (window.ethereum) {
+    try {
+      // Request user to connect their Metamask wallet
+      const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+      const userWalletAddress = accounts[0];
+      // Perform any action after successful login, e.g. redirect to dashboard page
+      console.log(`Logged in with address: ${userWalletAddress}`);
+    } catch (error) {
+      console.error(error);
+    }
+  } else {
+    console.error('Metamask is not installed');
+  }
+}
+
+	</script>
+</body>
+</html>

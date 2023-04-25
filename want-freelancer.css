@@ -1,0 +1,168 @@
+/* reset styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* base styles */
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #333;
+	background-color: #fff;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	background-color: #222;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+}
+
+nav li {
+	margin-right: 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+.nav-buttons {
+    position: absolute;
+    top: 5px;
+    right: 25px;
+    display: flex;
+  }
+  
+  .nav-buttons a {
+    margin-left: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-buttons {
+      position: static;
+      display: block;
+      margin-top: 40px;
+    }
+  
+    .nav-buttons a {
+      display: block;
+      margin: 10px 0;
+    }
+  }
+  
+
+main {
+	padding: 50px;
+}
+
+form {
+	max-width: 800px;
+	margin: 0 auto;
+	background-color: #f7f7f7;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+	font-weight: bold;
+	color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"] {
+	display: inline-block;
+	padding: 10px 30px;
+	background-color: #222;
+	color: #fff;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+option{
+    background-color: #898080;
+}
+select {
+    display: inline-block;
+	padding: 10px 30px;
+	background-color: #898080;
+	color: #fff;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+input[type="submit"]:hover {
+	background-color: #333;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .btn-primary {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #333;
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #333;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+
+footer {
+	text-align: center;
+	padding: 20px;
+	background-color: #222;
+	color: #fff;
+}
